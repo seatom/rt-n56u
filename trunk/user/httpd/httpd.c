@@ -950,7 +950,7 @@ handle_request(FILE *conn_fp, const conn_item_t *item)
 
 	login_state = http_login_check(&conn_ip);
 	
-	if (login_state == 0) {
+	if (login_state == 4) {
 		if (strstr(file, ".htm") != NULL || strstr(file, ".asp") != NULL) {
 			file = "Nologin.asp";
 			query = NULL;
